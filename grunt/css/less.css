@@ -1,3 +1,56 @@
-a {
-  color: #fff;
+.nav_center {
+  margin: 0 auto;
+  width: 100%;
+}
+.navbar-default {
+  background-color: #fff;
+  opacity: 0.8;
+}
+.navbar-default .container .nav_center .navbar-header a {
+  color: #000;
+}
+.navbar-default .container .nav_center .navbar-collapse ul > li a {
+  color: #000;
+}
+.container .centered .gallery .hide_box {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  right: 15px;
+  bottom: 0;
+}
+.container .centered .gallery .hide_box .cate {
+  display: table;
+  width: 100% ;
+  height: 100%;
+}
+.container .centered .gallery .hide_box .cate .cap {
+  display: table-cell;
+  vertical-align: middle;
+  background-color: #fff;
+  height: 40%;
+  text-align: center;
+}
+.container .centered .gallery .hide_box .cate .cap h3 {
+  font-size: 40px;
+  color: #1b1b1b;
+}
+.container .centered .gallery .hide_box .cate .cap p {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #999999;
+}
+.container .centered .gallery .hide_box .cate .cap span {
+  font-size: 14px;
+  display: block;
+  margin: 10px 0;
+  color: #999999;
+}
+.container .centered .gallery .hide_box .cate .cap .btn_box {
+  margin: 10px 0 0;
+  display: block;
+  text-align: center;
+}
+.container .centered .gallery .hide_box .cate .cap .btn_box button:first-child ~ button {
+  margin-left: 5px;
 }
