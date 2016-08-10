@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link href="plugin/imageviewer.css"  rel="stylesheet" type="text/css" />
+  <script src="plugin/imageviewer.js"></script>
+  <script type="text/javascript">
+
+  $(function () {
+      var viewer = ImageViewer();
+      $('.gallery-items').click(function () {
+          var imgSrc = this.src,
+              highResolutionImage = $(this).data('high-res-img');
+
+          viewer.show(imgSrc, highResolutionImage);
+      });
+
+      $('body button').click(function(){
+
+        $('.photo').css({
+          marginLeft : function(){
+              var photo = $(this).width()
+
+              return -parseInt((photo)/2)+"px"
+
+          },zIndex : 5
+
+        }).show()
+
+      })
+
+      $('.close01').click(function(){
+
+        $('.photo').hide()
+
+    })
+
+  });
+  </script>
+
+  <style>
+  html,body {margin: 0;padding: 0; width: 100%; height: 100%;}
+  ul,ol,li {list-style: none; margin: 0;padding: 0;}
+
+
+  .photo {display: none; width: 1000px; height: 700px; border: 5px #ccc solid; border-radius:10px; position: fixed; top:50px; text-align: center; left: 50%;
+          background-color: #fff;}
+  .photo h3{margin:40px 0 50px; font-weight: bold;}
+  .photo .close01 {position: absolute; bottom:35px; margin-left: -29px;}
+  .photo .cf div {width:20%; height: 420px; margin: 15px; display: inline-block;}
+  .photo .cf span {display: block; font-size: 18px; font-weight: bold; margin-top: 20px;}
+  .photo .cf div .style01 {height: 100%;}
+  .photo .cf div .style01:hover{opacity: 0.5;}
+
+
+
+  </style>
+<!-- <img src="../data/img1/drugmain.jpg" alt=""> -->
+</head>
+<body>
+  <button button class="btn btn-default" type="button">click</button>
+
+  <div class="photo">
+    <h3>제일제약 홈페이지 리뉴얼 디자인</h3>
+
+        <div id="image-gallery-1" class="cf">
+        <div>
+          <img src="../data/img1/drugmain.jpg" data-high-res-src="../data/img1/drugmain.jpg" alt="" class="gallery-items style01">
+          <span>메인 페이지</span>
+        </div>
+        <div>
+          <img src="../data/img1/drugsub.jpg" data-high-res-src="../data/img1/drugsub.jpg" alt="" class="gallery-items style01" >
+          <span>서브 페이지</span>
+        </div>
+        <div>
+          <img src="../data/img1/drug_mobile.jpg" data-high-res-src="../data/img1/drug_mobile.jpg" alt="" class="gallery-items style01" >
+          <span>모바일 페이지</span>
+        </div>
+        </div>
+
+        <button class="close01 btn btn-default" type="button">close</button>
+
+
+  </div>
+
+
+
+</body>
+</html>

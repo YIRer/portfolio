@@ -25,6 +25,15 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <link href="plugin/imageviewer.css"  rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="plugin/imageviewer.js"></script>
+    <script src="assets/js/master.js"></script>
+
+
   </head>
 
   <body>
@@ -87,8 +96,8 @@
                 제일제약 홈페이지 리뉴얼
               </span>
               <div class="btn_box">
-                <button class="btn btn-default" type="button"><strong>Moblie</strong></button>
-                <button class="btn btn-default" type="button"><strong>PC</strong></button>
+
+                <button class="btn btn-default image_pop" id="jeil" type="button"><strong>이미지 보기</strong></button>
 
               </div>
 
@@ -111,8 +120,8 @@
                 제일제약 홈페이지 리뉴얼
               </span>
               <div class="btn_box">
-                <button class="btn btn-default" type="button"><strong>Moblie</strong></button>
-                <button class="btn btn-default" type="button"><strong>PC</strong></button>
+
+                <button class="btn btn-default image_pop" id="jeil" type="button"><strong>이미지 보기</strong></button>
 
               </div>
 
@@ -135,8 +144,8 @@
                 제일제약 홈페이지 리뉴얼
               </span>
               <div class="btn_box">
-                <button class="btn btn-default" type="button"><strong>Moblie</strong></button>
-                <button class="btn btn-default" type="button"><strong>PC</strong></button>
+
+                <button class="btn btn-default" type="button"><strong>사이트 보기</strong></button>
 
               </div>
 
@@ -159,8 +168,8 @@
                 제일제약 홈페이지 리뉴얼
               </span>
               <div class="btn_box">
-                <button class="btn btn-default" type="button"><strong>Moblie</strong></button>
-                <button class="btn btn-default" type="button"><strong>PC</strong></button>
+
+                  <button class="btn btn-default" type="button"><strong>사이트 보기</strong></button>
 
               </div>
 
@@ -183,8 +192,8 @@
                 제일제약 홈페이지 리뉴얼
               </span>
               <div class="btn_box">
-                <button class="btn btn-default" type="button"><strong>Moblie</strong></button>
-                <button class="btn btn-default" type="button"><strong>PC</strong></button>
+
+                  <button class="btn btn-default" type="button"><strong>사이트 보기</strong></button>
 
               </div>
 
@@ -207,8 +216,8 @@
                 제일제약 홈페이지 리뉴얼
               </span>
               <div class="btn_box">
-                <button class="btn btn-default" type="button"><strong>Moblie</strong></button>
-                <button class="btn btn-default" type="button"><strong>PC</strong></button>
+
+                  <button class="btn btn-default" type="button"><strong>사이트 보기</strong></button>
 
               </div>
 
@@ -253,13 +262,34 @@
 			</div>
 		</div>
 	</div><!--/footerwrap -->
+  <div class="photo0 jeil">
+    <h3>제일제약 홈페이지 리뉴얼 디자인</h3>
+    <p>마우스 휠 확대/축소, 드래그 스크롤</p>
 
+        <div id="image-gallery-1" class="cf">
+        <div>
+          <img src="../data/img1/drugmain.jpg" data-high-res-src="../data/img1/drugmain.jpg" alt="" class="gallery-items style01">
+          <span>메인 페이지</span>
+        </div>
+        <div>
+          <img src="../data/img1/drugsub.jpg" data-high-res-src="../data/img1/drugsub.jpg" alt="" class="gallery-items style01" >
+          <span>서브 페이지</span>
+        </div>
+        <div>
+          <img src="../data/img1/drug_mobile.jpg" data-high-res-src="../data/img1/drug_mobile.jpg" alt="" class="gallery-items style01" >
+          <span>모바일 페이지</span>
+        </div>
+        </div>
+
+        <button class="close01 btn btn-default" type="button">close</button>
+
+
+  </div>
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+
   </body>
 </html>
