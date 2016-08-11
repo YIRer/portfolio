@@ -45,16 +45,18 @@
   html,body {margin: 0;padding: 0; width: 100%; height: 100%;}
   ul,ol,li {list-style: none; margin: 0;padding: 0;}
 
-
-  .photo {display: none; width: 1000px; height: 700px; border: 5px #ccc solid; border-radius:10px; position: fixed; top:50px; text-align: center; left: 50%;
+  .wrap  {display:block;position: fixed; top:0px; bottom: 0;left: 0; right: 0; vertical-align: middle; text-align: center;}
+  .photo {display: block; position: relative; width: 1000px; height: 700px; border: 5px #ccc solid; border-radius:10px;  text-align: center; margin: 0 auto;
           background-color: #fff;}
   .photo h3{margin:40px 0 50px; font-weight: bold;}
-  .photo .close01 {position: absolute; bottom:35px; margin-left: -29px;}
+  .photo .close01 {position: absolute; bottom:20px; margin-left: -29px; }
   .photo .cf div {width:20%; height: 420px; margin: 15px; display: inline-block;}
   .photo .cf span {display: block; font-size: 18px; font-weight: bold; margin-top: 20px;}
   .photo .cf div .style01 {height: 100%;}
   .photo .cf div .style01:hover{opacity: 0.5;}
 
+  .photo .cf div .style02 {height: 200px;}
+  .photo .cf div .style02:hover{opacity: 0.5;}
 
 
   </style>
@@ -62,30 +64,32 @@
 </head>
 <body>
   <button button class="btn btn-default" type="button">click</button>
+<div class="wrap">
 
-  <div class="photo">
-    <h3>제일제약 홈페이지 리뉴얼 디자인</h3>
+    <div class="toymaru">
+      <h3>제일제약 홈페이지 리뉴얼 디자인</h3>
 
-        <div id="image-gallery-1" class="cf">
-        <div>
-          <img src="../data/img1/drugmain.jpg" data-high-res-src="../data/img1/drugmain.jpg" alt="" class="gallery-items style01">
-          <span>메인 페이지</span>
+          <div id="" class="cf">
+          <div class="toymaru">
+            <img src="../data/img1/toymain2.jpg" data-high-res-src="../data/img1/toymain2.jpg" alt="" class="gallery-items style01">
+            <span>메인 페이지</span>
+          </div>
+          <div class="toymaru">
+            <img src="../data/img1/toysub.jpg" data-high-res-src="../data/img1/toysub.jpg" alt="" class="gallery-items style01" >
+            <span>서브 페이지</span>
+          </div>
+          <div class="toymaru">
+            <img src="../data/img1/toy03.jpg" data-high-res-src="../data/img1/toy03.jpg" alt="" class="gallery-items style02" >
+            <span class="span_margin">페이지 상세</span>
+            <img src="../data/img1/toy04.jpg" data-high-res-src="../data/img1/toy04.jpg" alt="" class="gallery-items style02" >
+            <span>페이지 상세</span>
+          </div>
         </div>
-        <div>
-          <img src="../data/img1/drugsub.jpg" data-high-res-src="../data/img1/drugsub.jpg" alt="" class="gallery-items style01" >
-          <span>서브 페이지</span>
-        </div>
-        <div>
-          <img src="../data/img1/drug_mobile.jpg" data-high-res-src="../data/img1/drug_mobile.jpg" alt="" class="gallery-items style01" >
-          <span>모바일 페이지</span>
-        </div>
-        </div>
 
-        <button class="close01 btn btn-default" type="button">close</button>
+    </div>
 
 
-  </div>
-
+</div>
 
 
 </body>
