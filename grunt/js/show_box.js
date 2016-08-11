@@ -28,17 +28,22 @@ $(function(){
         console.log(gh)
   			if(990 < ww){
 
+          $('.hide_box').removeClass('view_box')
+          $('.hide_box').css('display','none')
         	$('.gallery').mouseenter(enter);
   				$('.gallery').mouseleave(leave);
           $('.gallery').off('click')
 
 
-  			}else if(990 >= ww && 320 < ww){
+  			}else if(990 >= ww && 337 < ww){
+
+          $('.hide_box').removeClass('view_box')
+          $('.hide_box').css('display','none')
           $('.gallery').off('mouseenter');
           $('.gallery').off('mouseleave');
-          $('.gallery').on('click',click);
+          $('.gallery').click(click);
 
-        }else{
+        }else if(337 >= ww){
 
           $('.hide_box').css({display:'block'})
           $('.gallery').off('mouseenter');

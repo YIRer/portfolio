@@ -290,6 +290,9 @@ h1, h2, h3, h4, h5, h6 {
 .container .centered .gallery .hide_box .cate .cap .btn_box button:first-child ~ button {
   margin-left: 5px;
 }
+.container .centered .gallery .view_box {
+  display: block;
+}
 .navbar-fixed-top {
   z-index: 3;
 }
@@ -381,9 +384,6 @@ h1, h2, h3, h4, h5, h6 {
 .stop-scrolling {
   height: 100%;
   overflow: hidden;
-}
-.view_box {
-  display: block;
 }
 a {
   text-decoration: none;
