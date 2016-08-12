@@ -198,3 +198,52 @@ a {
     font-size: 10px;
   }
 }
+.gage span {
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  right: 20px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.gage span .box {
+  width: 1000px;
+  height: 300px;
+  outline: 1px red solid;
+}
+.gage span .box .gage_box {
+  position: relative;
+  width: 300px;
+  height: 40px;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-right: 30px;
+  padding: 10px;
+}
+.gage span .box .gage_box .gage {
+  height: 20px;
+  float: left;
+  border-radius: 100px;
+}
+.red {
+  background-color: #d9534f;
+  color: #d9534f;
+}
+.yellow {
+  background-color: #ec971f;
+  color: #ec971f;
+}
+.green {
+  background-color: #449d44;
+  color: #449d44;
+}
+.mint {
+  background-color: #31b0d5;
+  color: #31b0d5;
+}
+.blue {
+  background-color: #337ab7;
+  color: #337ab7;
+}
