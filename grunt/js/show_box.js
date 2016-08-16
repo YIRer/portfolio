@@ -16,7 +16,7 @@ $(function(){
 
   }
   var resize = function(){
-    console.log('sad')
+  
     $(window).trigger('resize')
 
   }
@@ -30,7 +30,7 @@ $(function(){
   			var ww = $(this).width()
         var gh = $('.gallery').height()
         $('.hide_box').css({height:gh})
-        console.log(gh)
+
   			if(990 < ww && $('.gallery').is('.big_size')!==true){
 
           $('.hide_box').removeClass('view_box')

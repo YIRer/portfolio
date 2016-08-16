@@ -10,6 +10,34 @@
   <script type="text/javascript">
 
   $(function () {
+    var mouse_x;
+    var mouse_y;
+
+    $('button').mouseenter(function(){
+
+      mouse_x = event.clientX - 15;
+      mouse_y = event.clientY - 15;
+
+      $('.connect_box').css({
+
+        top : mouse_y,
+        left : mouse_x,
+        zIndex:'5'
+
+
+      }).slideDown().css({  display:'table'})
+
+      $('.connect_box').mouseleave(function(){
+
+          $(this).css('display','none')
+
+      })
+
+
+
+    })
+
+
     //   var viewer = ImageViewer();
     //   $('.gallery-items').click(function () {
     //       var imgSrc = this.src,
@@ -40,31 +68,31 @@
 
 
 
-      $(window).load(function(){
-
-        $('.per50').animate({
-
-        width : '50%'
-
-        },1000)
-        $('.per10').animate({
-
-        width : '10%'
-
-        },1000)
-        $('.per70').animate({
-
-        width : '70%'
-
-        },1000)
-        $('.per100').animate({
-
-        width : '100%'
-
-      },1000).children('span').css('color','#fff')
-
-
-      })
+      // $(window).load(function(){
+      //
+      //   $('.per50').animate({
+      //
+      //   width : '50%'
+      //
+      //   },1000)
+      //   $('.per10').animate({
+      //
+      //   width : '10%'
+      //
+      //   },1000)
+      //   $('.per70').animate({
+      //
+      //   width : '70%'
+      //
+      //   },1000)
+      //   $('.per100').animate({
+      //
+      //   width : '100%'
+      //
+      // },1000).children('span').css('color','#fff')
+      //
+      //
+      // })
 
 
 
@@ -74,6 +102,11 @@
   <style>
   html,body {margin: 0;padding: 0; width: 100%; height: 100%;}
   ul,ol,li {list-style: none; margin: 0;padding: 0;}
+
+  .connect_box{position: fixed; width: 280px;height: 60px; text-align: center; background-color: #fff; border:1px #4d4d4d solid; border-radius:7px; display: none;}
+  .connect{display: table-cell; vertical-align: middle;}
+  .connect span{display:block;}
+
 
   /*.wrap  {display:block;position: fixed; top:0px; bottom: 0;left: 0; right: 0; vertical-align: middle; text-align: center;}
   .photo {display: block; position: relative; width: 1000px; height: 700px; border: 5px #ccc solid; border-radius:10px;  text-align: center; margin: 0 auto;
@@ -89,7 +122,7 @@
   .photo .cf div .style02:hover{opacity: 0.5;}*/
 
 
-  .box {width: 1000px; height: 300px;outline:1px red solid;}
+  /*.box {width: 1000px; height: 300px;outline:1px red solid;}
   .gage_box {position: relative; width: 300px; height: 40px; display:inline-block; -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; margin-right: 30px; padding:10px;}
@@ -100,13 +133,30 @@
   .blue {background-color: #337ab7; color: #337ab7;}
   .gage {height: 20px; float:left; border-radius: 100px;}
 
-  .gage span {position: absolute; top: 50%; margin-top: -10px; right:20px; font-weight: bold; font-size: 14px;}
+  .gage span {position: absolute; top: 50%; margin-top: -10px; right:20px; font-weight: bold; font-size: 14px;}*/
 
   </style>
 <!-- <img src="../data/img1/drugmain.jpg" alt=""> -->
 </head>
 <body>
-  <button button class="btn btn-default" type="button">click</button>
+
+
+  <div class="connect_box">
+
+  <div class="connect">
+
+  <span><strong>Kakaotalk</strong> : zeroonelove@naver.com</span>
+  <span><strong>Line</strong> : zeroonelove@naver.com</span>
+
+
+
+  </div>
+
+  </div>
+
+
+
+   <button button class="btn btn-default" type="button">click</button>
 <!-- <div class="wrap">
 
     <div class="toymaru">
@@ -136,7 +186,7 @@
 
 
 </div> -->
-
+<!--
 <div class="box">
   <div class="gage_box">
     <div class="gage per50 red">
@@ -158,7 +208,7 @@
       <span>경험</span>
     </div>
   </div>
-</div>
+</div> -->
 
 
 </body>

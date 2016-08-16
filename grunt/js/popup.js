@@ -32,9 +32,9 @@ $(function(){
       var popup_fixed =  pop_height-10
 
       $('.close01').css({
-
+      
         top : popup_fixed,
-        zIndex : '6'
+        zIndex : '10'
 
 
       })
@@ -48,7 +48,7 @@ $(function(){
 
             return -parseInt((photo)/2)+"px"
 
-        },zIndex : 5
+        },zIndex : '5'
 
       })
 
@@ -66,7 +66,7 @@ $(function(){
     $('.cap .btn_box .image_pop').click(function(){
 
       indx = $(this).attr('id')
-      console.log(indx)
+
       $('body').addClass('stop-scrolling')
        blind()
 
@@ -84,7 +84,7 @@ $(function(){
 
             return -parseInt((photo)/2)+"px"
 
-        },zIndex : 5
+        },zIndex : '5'
 
       }).show()
 

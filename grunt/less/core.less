@@ -5,6 +5,13 @@
 @All_font : #4a4a4a;
 @font_color01 : #1b1b1b;
 @font_color02 : #999999;
+@gray10 : #d1cfcf;
+@gray50 : #adadad;
+@gray70 : #484848;
+@gray100 : #212121;
+@gage_font_color: #484848;
+
+
 .nav_center {margin: 0 auto; width: 100%;}
 .navbar-default {background-color: #fff; opacity: 0.8;
   .container{
@@ -60,6 +67,7 @@
           }
         }
       }
+
       .view_box{display: block;}
     }
   }
@@ -103,17 +111,166 @@
   overflow: hidden;
 }
 
+.introduce{text-align: center;
+  h1{font-size: 40px; margin: 50px 0 20px;}
+  h3{font-size: 22px; margin: 40px 0 30px; color: #acacac;}
+
+
+
+  pre{
+    display: block;
+    padding: 0px;
+    margin: 0 0 0px;
+    font-size: 15px;
+    line-height: normal;
+    color: #333;
+    background-color: transparent;
+    border:0 none;
+    word-wrap: break-word;
+    white-space: pre-line;
+  }
+}
+
+
+.skill_title{text-align: center;  margin: 0 0 20px 0;
+
+  h3 { margin: 30px 0;}
+
+  div{display: table; margin: 0 auto;
+      div{display:table-cell;
+      button{width: 20px;height: 20px; display: block; border: 0 none; box-shadow: 0; float:left; margin-right: 10px;}
+      span {display: block; float:left; margin-right: 10px;}
+      &:last-child{margin-right: 0;}
+      .all_select {background-color: transparent; border: 1px gray solid; box-sizing: border-box;}
+      .experience {background-color: @gray10;}
+      .basic {background-color: @gray50;}
+      .better {background-color: @gray70;}
+      .perfect {background-color: @gray100;}
+
+    }
+  }
+}
+
+
+
+
+
+
+
+.box{
+  width: 100%; height: auto; margin: 30px auto 30px;
+  .gage_box{
+    position: relative; width: 46%; height: 40px; display:inline-block; -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; margin-right: 30px; padding:10px;
+    .gage{
+      height: 20px; float:left; border-radius: 100px;
+      span {position: absolute; top: 50%; margin-top: -10px; right:20px; font-weight: bold; font-size: 14px;}
+
+
+    }
+  }
+}
+
+
+.connect_box{position: fixed; width: 240px;height: 60px; text-align: center; background-color: #fff; border:1px #4d4d4d solid; border-radius:7px; display: none;
+  .connect{display: table-cell; vertical-align: middle;
+            span{display:block;}
+
+  }
+}
+
+
+
+
+
+.gray50 {background-color: @gray50; color: @gage_font_color;}
+.gray100 {background-color: @gray100; color: @gage_font_color;}
+.gray10{background-color: @gray10; color: @gage_font_color;}
+.gray70 {background-color: @gray70; color: @gage_font_color;}
+.blue {background-color: #337ab7; color: #337ab7;}
+.flaticon-line-logo::before{margin: 0;}
+
+
 
 
 a{text-decoration: none;}
+
+@media screen and (max-width:991px){
+
+  .box{
+
+    .gage_box{
+      margin: 0;
+      width: 49%;
+
+    }
+
+  }
+}
+
 @media screen and (max-width:768px){
+
+  .skill_title{
+
+    div{
+      display: table;
+    }
+  }
+
+
   .navbar-default{opacity: 1;}
+
+  .container{
+    .row{
+      .gallery{
+        a{
+          img{width: 100% ;}
+
+        }
+
+      }
+    }
+  }
+
+
 }
 
 @media screen and (max-width: 545px){
 
 
-  .photo0 {width: 300px; height: 50%;
+  .introduce{text-align: center;
+    h1{font-size: 33px; margin: 40px 0 15px;}
+    h3{font-size: 20px; margin: 30px 0 20px; color: #acacac;}
+
+
+
+    pre{
+      text-align: left;
+    }
+  }
+
+
+  .skill_title{
+
+    div{
+      display: none;
+    }
+  }
+
+
+  .box{
+
+    .gage_box{
+      width: 100%;
+
+  }
+}
+
+
+
+
+  .photo0 {width: 300px; height: 50%; overflow-x: hidden;
     h3{margin:20px 0 15px; font-size: 20px; font-weight: bold; color: @All_font; padding:0 5px; line-height: 37px;}
     p{font-size: 15px; font-weight: bold; margin-bottom: 10px; color: #999999;}
 
@@ -155,23 +312,3 @@ a{text-decoration: none;}
   }
 
 }
-
-
-
-.gage span {position: absolute; top: 50%; margin-top: -10px; right:20px; font-weight: bold; font-size: 14px;
-
-  .box {width: 1000px; height: 300px;outline:1px red solid;
-    .gage_box {position: relative; width: 300px; height: 40px; display:inline-block; -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box; box-sizing: border-box; margin-right: 30px; padding:10px;
-
-        .gage {height: 20px; float:left; border-radius: 100px;}
-
-    }
-  }
-}
-
-.red {background-color: #d9534f; color: #d9534f;}
-.yellow{background-color: #ec971f; color: #ec971f;}
-.green{background-color: #449d44; color: #449d44;}
-.mint {background-color: #31b0d5; color: #31b0d5;}
-.blue {background-color: #337ab7; color: #337ab7;}
