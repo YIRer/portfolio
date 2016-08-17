@@ -79,10 +79,13 @@ $(function () {
 
 
 
-    function view_click (show){
+    function view_click (x){
 
 
-        $('.box .gage_box').css('display','none').find('.'+show).parent().css('display','inlin-block')
+
+
+        $('.box .gage_box').css('display','none')
+        $('.'+x).parent().css('display','inline-block')
 
 
 

@@ -11,6 +11,9 @@
 @gray100 : #212121;
 @gage_font_color: #484848;
 
+::-webkit-scrollbar {
+    display: none;
+}
 
 .nav_center {margin: 0 auto; width: 100%;}
 .navbar-default {background-color: #fff; opacity: 0.8;
@@ -78,9 +81,9 @@
 
 // popup-effect
 
-.wrap {display:none;position: fixed; top:80px; bottom: 0;left: 0; right: 0; vertical-align: middle; text-align: center; z-index: 5; }
-.photo0 {display: none; position: relative;max-width: 1200px; width: 80%; height: 75%; border: 5px #ccc solid; border-radius:10px; position: fixed; top:50px; text-align: center; left: 50%;
-        background-color: #fff; overflow-x: hidden;
+.wrap {display:none;position: fixed; top:80px; bottom: 0;left: 0; right: 0; vertical-align: middle; text-align: center; z-index: 5;  }
+.photo0 {display: none; position: relative; max-width: 1200px; width: 80%; height: 75%; border: 5px #ccc solid; border-radius:10px; position: fixed; top:50px; text-align: center; left: 50%;
+        background-color: #fff; overflow:hidden; -webkit-overflow-scrolling: touch;
   h3{margin:40px 0 30px; font-weight: bold; color: @All_font;}
   p{font-size: 14px; margin-bottom: 20px; color: #999999;}
 
@@ -91,7 +94,7 @@
     .style01 {max-height: 100%; max-width: 100%; cursor: pointer;
       &:hover{opacity: 0.5;}
       }
-    .style02 {max-height: 27%; max-width: 100%; cursor: pointer;
+    .style02 {max-height: 100%; max-width: 100%; cursor: pointer; display:block;
 
         &:hover{opacity: 0.5;}
     }
@@ -99,12 +102,13 @@
 
     }
   }
-  .close01 {position: fixed; left:50%; margin-left: -29px;}
+  .close01 {position: fixed; left:50%; margin-left: -29px; -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;}
   .btn-default{background-color: #16a085; color: #fff; border:0 none;}
 }
 
-.photo0 .jeil {display: none;}
-.photo0 .toymaru {display: none;}
+.photo0 .jeil {display: none; overflow:auto; height: 100%;}
+.photo0 .toymaru {display: none; overflow:auto;height: 100%;}
 
 .stop-scrolling {
   height: 100%;
@@ -270,7 +274,7 @@ a{text-decoration: none;}
 
 
 
-  .photo0 {width: 300px; height: 50%; overflow-x: hidden;
+  .photo0 {
     h3{margin:20px 0 15px; font-size: 20px; font-weight: bold; color: @All_font; padding:0 5px; line-height: 37px;}
     p{font-size: 15px; font-weight: bold; margin-bottom: 10px; color: #999999;}
 

@@ -230,6 +230,9 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
 .nav_center {
   margin: 0 auto;
   width: 100%;
@@ -320,7 +323,8 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   left: 50%;
   background-color: #fff;
-  overflow-x: hidden;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 .photo0 h3 {
   margin: 40px 0 30px;
@@ -355,9 +359,10 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.5;
 }
 .photo0 .cf div .style02 {
-  max-height: 27%;
+  max-height: 100%;
   max-width: 100%;
   cursor: pointer;
+  display: block;
 }
 .photo0 .cf div .style02:hover {
   opacity: 0.5;
@@ -369,6 +374,8 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   left: 50%;
   margin-left: -29px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 .photo0 .btn-default {
   background-color: #16a085;
@@ -377,9 +384,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 .photo0 .jeil {
   display: none;
+  overflow: auto;
+  height: 100%;
 }
 .photo0 .toymaru {
   display: none;
+  overflow: auto;
+  height: 100%;
 }
 .stop-scrolling {
   height: 100%;
@@ -567,11 +578,6 @@ a {
   }
   .box .gage_box {
     width: 100%;
-  }
-  .photo0 {
-    width: 300px;
-    height: 50%;
-    overflow-x: hidden;
   }
   .photo0 h3 {
     margin: 20px 0 15px;

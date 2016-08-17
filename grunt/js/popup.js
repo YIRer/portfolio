@@ -27,22 +27,10 @@ function blind(){
 $(function(){
 
     $(window).resize(function(){
-
       var pop_height = $('.photo0').height()
       var popup_fixed =  pop_height-10
 
-      $('.close01').css({
-      
-        top : popup_fixed,
-        zIndex : '10'
-
-
-      })
-
-
-
-
-      $('.photo0').css({
+    $('.photo0').css({
         marginLeft : function(){
             var photo = $(this).width()
 
@@ -50,6 +38,14 @@ $(function(){
 
         },zIndex : '5'
 
+      })
+
+      $('.close01').css({
+
+        top : popup_fixed,
+        left:'50%',
+        zIndex : '10',
+        marginLeft : '-24px'
       })
 
     })
@@ -65,6 +61,9 @@ $(function(){
 
     $('.cap .btn_box .image_pop').click(function(){
 
+      var pop_height = $('.photo0').height()
+      var popup_fixed =  pop_height-10
+
       indx = $(this).attr('id')
 
       $('body').addClass('stop-scrolling')
@@ -72,6 +71,9 @@ $(function(){
 
       // $('.'+indx).css('display','none')
       $('.close01').css({
+
+        top : popup_fixed,
+        zIndex : '10',
         marginLeft : function(){
             var close_btn = $('.close01').width()
 

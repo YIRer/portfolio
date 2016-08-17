@@ -79,10 +79,13 @@ $(function () {
 
 
 
-    function view_click (show){
+    function view_click (x){
 
 
-        $('.box .gage_box').css('display','none').find('.'+show).parent().css('display','inlin-block')
+
+
+        $('.box .gage_box').css('display','none')
+        $('.'+x).parent().css('display','inline-block')
 
 
 
@@ -109,31 +112,66 @@ $(function () {
 
         }).slideDown().css({  display:'table'})
 
-        $('.connect_box').mouseleave(function(){
+    }
+
+  var social_leave = function(){
+
+
+        $(this).slideUp()
+
+
+  }
+
+
+    var social_click_small = function(){
+
+          mouse_y = $('.flaticon-line-logo').offset().top - $(window).scrollTop();   // 버튼 A 의 ClientY 좌표
+          console.log(mouse_y)
+
+          $('.connect_box').css({
+
+            top : mouse_y,
+            left : '50%',
+            marginLeft : '-120px',
+            zIndex:'5'
+
+          }).slideDown().css({  display:'table'})
+
+
+
+      }
+
+      var social_shut_down = function(){
 
             $(this).slideUp()
 
-        })
 
-    }
-
+      }
 
 
 $(window).resize(function(){
       var wwid = $(this).width()
+      console.log(wwid)
 
-      if(320 < wwid && $('#social').is('.size_big')!==true){
+      if(545 < wwid && $('#social').is('.size_big')!==true){
 
         $('#social').addClass('size_big')
         $('#social').removeClass('size_small')
-
         $('.flaticon-line-logo').click(social_click)
+        $('.connect_box').mouseleave(social_leave)
+        $('.connect_box').off('click')
 
 
-      }else if(320 >= wwid && $('#social').is('.size_small')!==true) {
+
+
+      }else if(545 >= wwid && $('#social').is('.size_small')!==true) {
 
         $('#social').addClass('size_small')
         $('#social').removeClass('size_big')
+
+        $('.flaticon-line-logo').click(social_click_small)
+        $('.connect_box').off('mouseleave')
+        $('.connect_box').click(social_leave)
 
 
       }
@@ -172,22 +210,10 @@ function blind(){
 $(function(){
 
     $(window).resize(function(){
-
       var pop_height = $('.photo0').height()
       var popup_fixed =  pop_height-10
 
-      $('.close01').css({
-      
-        top : popup_fixed,
-        zIndex : '10'
-
-
-      })
-
-
-
-
-      $('.photo0').css({
+    $('.photo0').css({
         marginLeft : function(){
             var photo = $(this).width()
 
@@ -195,6 +221,14 @@ $(function(){
 
         },zIndex : '5'
 
+      })
+
+      $('.close01').css({
+
+        top : popup_fixed,
+        left:'50%',
+        zIndex : '10',
+        marginLeft : '-24px'
       })
 
     })
@@ -210,6 +244,9 @@ $(function(){
 
     $('.cap .btn_box .image_pop').click(function(){
 
+      var pop_height = $('.photo0').height()
+      var popup_fixed =  pop_height-10
+
       indx = $(this).attr('id')
 
       $('body').addClass('stop-scrolling')
@@ -217,6 +254,9 @@ $(function(){
 
       // $('.'+indx).css('display','none')
       $('.close01').css({
+
+        top : popup_fixed,
+        zIndex : '10',
         marginLeft : function(){
             var close_btn = $('.close01').width()
 
