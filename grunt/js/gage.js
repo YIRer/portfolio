@@ -76,7 +76,10 @@ $(function () {
     })
 
 
+    $(window).resize(function(){
 
+      $('.all_select').click()
+    })
 
 
     function view_click (x){
