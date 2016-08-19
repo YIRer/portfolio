@@ -1,10 +1,15 @@
 $(function () {
-  var sch = $(window).scrollTop();
+
 
   $(window).scroll(function(){
+    var sch = $(window).scrollTop();
+    console.log(sch)
 
 
-      if(sch = 310){
+      if(sch >= 600 && $('body').is('.scrollon')!==true){
+
+              $('body').addClass('scrollon')
+              $('body').removeClass('scrolloff')
 
 
 
@@ -30,6 +35,9 @@ $(function () {
               },1500).children('span').css('color','#fff')
 
 
+      }else if(sch < 600 && $('body').is('.scrolloff')!==true){
+        $('body').addClass('scrolloff')
+        $('body').removeClass('scrollon')
       }
 
 
