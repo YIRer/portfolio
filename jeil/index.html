@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+  <style>
+    html,body {margin: 0;padding: 0;}
+    header {width: 100%; background-color: #fff; position: fixed; opacity: 0.95; height: 84px;z-index: 1; border-bottom: 2px solid #FFE00F;-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; box-sizing: border-box;}
+    select {
+    -webkit-appearance: none;  /* 네이티브 외형 감추기 */
+    -moz-appearance: none;
+    appearance: none;
+    /*background: url(이미지 경로) no-repeat 95% 50%;  /* 화살표 모양의 이미지 */ */
+    }
+
+    /* IE 10, 11의 네이티브 화살표 숨기기 */
+    select::-ms-expand {
+    display: none;
+    }
+
+
+    .empty{margin: 0 auto; width: 960px;height: 30px;}
+    .head_warp{margin: 0 auto; width: 960px; height: 52px;}
+
+    .head_warp h1 {margin: 0; display: inline-block;text-indent: -9999px; background-image: url("data/kakopc_ci.png");}
+    .nav {display: inline-block;}
+    .nav button{text-indent: -9999px; border:0 none;}
+    .nav a{text-indent: -9999px; display: inline-block;}
+    .aside_select{display: inline-block;}
+    .local_select{display: inline-block;}
+    .leng{display:inline-block;}
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="empty"></div>
+  <div class="head_warp">
+    <h1>카카오로고</h1>
+    <div class="nav">
+
+      <button type="button" class="servise">서비스</button>
+      <a href="javascript:void(0)" class="jehu">제휴</a>
+      <a href="javascript:void(0)" class="help">고객센터</a>
+
+    </div>
+
+    <aside class="aside_select">
+      <div class="local_select">
+
+          <select class="local_selet" name="">
+            <option value="">지역선택</option>
+            <option value="">일본</option>
+          </select>
+
+      </div>
+      <div class="leng">
+
+        <select class="leng_select" name="" list="citynames">
+          <option value="" selected disabled hidden>Language(KO)</option>
+          <option value="">한국어(KO)</option>
+          <option value="">English(EN)</option>
+        </select>
+
+      </div>
+
+    </aside>
+
+
+  </div>
+</header>
+<section>
+
+</section>
+</body>
+</html>

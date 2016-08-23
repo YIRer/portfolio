@@ -233,6 +233,9 @@ h1, h2, h3, h4, h5, h6 {
 ::-webkit-scrollbar {
   display: none;
 }
+span.line2 {
+  display: inline-block;
+}
 #headerwrap .container .row .col-lg-6 h2 {
   color: #fff;
   margin-top: 10px;
